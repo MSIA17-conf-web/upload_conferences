@@ -1,0 +1,19 @@
+{
+  "name": "upload-conferences",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "px-flexbox-design": "^1.0.3",
+    "px-starter-kit-design": "^1.0.3",
+    "px-layout-design": "^1.0.2"
+  }
+}

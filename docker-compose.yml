@@ -10,8 +10,9 @@ services:
       dockerfile: Dockerfile_dev
     volumes: 
       - ./app:/app
+      - cert-handler_certbot-letsencrypt:/etc/letsencrypt
     ports:
-      - 4200
+      - 4200:4200
     stdin_open: true
 
   # ng_conf:
@@ -26,9 +27,9 @@ services:
   #   ports:
   #     - 443:443
 
-# volumes:
-#   cert-handler_certbot-letsencrypt:
-#     external: true
+volumes:
+  cert-handler_certbot-letsencrypt:
+    external: true
 
 networks: 
   default:
