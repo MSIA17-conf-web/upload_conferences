@@ -10,6 +10,10 @@
     </button>
 </form>
     </mat-card-content>
+    <button mat-flat-button color="primary" class="flex__item--middle u-1/3 u-mt+" type="button" (click)="getMarkdown()">
+        Load Markdown
+    </button>
+    <markdown [data]="markDown"></markdown>
     <!-- <form [formGroup]="uploadForm" (ngSubmit)="upload(uploadForm.value)" class="flex flex--col">
 
         <mat-form-field class="flex__item">

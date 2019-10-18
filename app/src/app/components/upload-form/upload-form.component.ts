@@ -19,7 +19,11 @@ export class UploadFormComponent implements OnInit {
     fileName: [null, Validators.required],
     fileSize: [null, Validators.required],
   })
+
+  markDown: string;
+
   ngOnInit() {
+    
   }
 
   uploadFile(form_values) {
@@ -32,6 +36,17 @@ export class UploadFormComponent implements OnInit {
     })
   }
 
+  getMarkdown() {
+    this.uploadService.getFileMinIO({
+      fileName: "test.md",
+      bucketName: "mybucket"
+    }).then(res =>{
+      console.log("Response from APIs", res);
+      this.markDown = atob(res);
+    }).catch(err => {
+      console.log(err);
+    })
+  }
   onFileChanged(event) {
     let reader = new FileReader();
     if(event.target.files && event.target.files.length) {

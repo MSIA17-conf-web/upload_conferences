@@ -16,7 +16,6 @@ import { MatCardModule } from "@angular/material/card";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UploadFormComponent } from './components/upload-form/upload-form.component';
-import { UploadFileComponent } from './components/upload-file/upload-file.component';
 
 import { UploadService } from "./services/upload/upload.service";
 
@@ -24,7 +23,6 @@ import { UploadService } from "./services/upload/upload.service";
   declarations: [
     AppComponent,
     UploadFormComponent,
-    UploadFileComponent
   ],
   imports: [
     BrowserModule,
