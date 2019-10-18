@@ -1,2 +1,30 @@
-<p>upload-form works!</p>
+<mat-card class=" u-1/3 layout__item u-mt++ u-p">
+    <mat-card-title>
+        Upload Form
+    </mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="uploadForm" novalidate (ngSubmit)="uploadFile(uploadForm.value)">
+<input class="form-control" type="file" (change)="onFileChanged($event)" required />
+    <button mat-flat-button color="primary" class="flex__item--middle u-1/3 u-mt+" type="sumbit">
+        Upload
+    </button>
+</form>
+    </mat-card-content>
+    <!-- <form [formGroup]="uploadForm" (ngSubmit)="upload(uploadForm.value)" class="flex flex--col">
 
+        <mat-form-field class="flex__item">
+            <input matInput placeholder="Conference name" formControlName="conferenceName" type="text"
+                name="conferenceName" required>
+        </mat-form-field>
+        
+        <mat-form-field class="flex__item">
+            <app-upload-file></app-upload-file>
+        </mat-form-field>
+
+        <div class="flex flex--row flex__item">
+            <button mat-flat-button color="primary" class="flex__item--middle u-1/3 u-mt+" type="sumbit">
+                Upload
+            </button>
+        </div>
+    </form> -->
+</mat-card>

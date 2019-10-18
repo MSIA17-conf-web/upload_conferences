@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { MarkdownModule } from 'ngx-markdown';
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -15,11 +16,15 @@ import { MatCardModule } from "@angular/material/card";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UploadFormComponent } from './components/upload-form/upload-form.component';
+import { UploadFileComponent } from './components/upload-file/upload-file.component';
+
+import { UploadService } from "./services/upload/upload.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    UploadFormComponent
+    UploadFormComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +38,10 @@ import { UploadFormComponent } from './components/upload-form/upload-form.compon
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MarkdownModule.forRoot()
   ],
-  providers: [],
+  providers: [UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

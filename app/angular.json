@@ -33,7 +33,8 @@
             "stylePreprocessorOptions": {
               "includePaths": [
                 "./bower_components"
-              ],
+              ]
+            },
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js"
             ]
@@ -130,6 +131,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "upload-conferences"
 }
